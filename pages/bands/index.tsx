@@ -1,8 +1,8 @@
-import NavRoot from "@/components/NavRoot"
 import { useState, useEffect, useMemo } from "react"
 import BandsService from "@/services/bands.service"
 import Image from "next/image"
 import NavBar from "@/components/NavBar"
+import NavRoot from "@/components/NavRoot"
 import Link from "next/link"
 
 

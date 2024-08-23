@@ -1,5 +1,9 @@
 import { useRouter } from 'next/router'
 import BandsService from '@/services/bands.service';
+import Image from "next/image"
+
+import NavBar from "@/components/NavBar"
+import NavRoot from "@/components/NavRoot"
 
 interface BandParams {
     _id: string,
@@ -17,10 +21,16 @@ const BandPage = ({ band }: { band: BandParams }) => {
     const data = band.data
     return (
         <div>
+            <NavBar />
+            <NavRoot />
 
-            <h1>{data.bandname}</h1>
-            <p>{router.query.slug}</p>
-        </div>  
+            <div className='flex flex-col items-center'>
+                <h1>{data.bandname}</h1>
+                <p>{data.genre.map(e => e)}</p>
+                <Image width={400} height={400} src={data.logoBand} alt="photo" />
+                <p>{new Date(data.formedDate).toISOString().split('T')[0]}</p>
+            </div>  
+        </div>
     )
 }
 
