@@ -2,6 +2,9 @@ import { useEffect, useState } from "react"
 import Cookies from "universal-cookie"
 import Image from "next/image"
 
+import NavRoot from "@/components/NavRoot"
+import NavBar from "@/components/NavBar"
+
 const profile = () => {
 
     const [cookie, setCookie] = useState({
@@ -31,7 +34,10 @@ const profile = () => {
 
     }, [])
     return(
-        <div className="container">
+        <div >
+            <NavBar />
+            <NavRoot />
+
             <p>ID: {cookie.band_id}</p>
             <Image width={400} height={400} src={cookie.logoBand} alt="photo" />
             <p>bandname: {cookie.bandname}</p>

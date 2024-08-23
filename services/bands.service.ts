@@ -17,4 +17,14 @@ export default class BandsService {
             return { status: false, data: error }
         }
     }
+
+    async getBandById(_id:string) {
+        try {
+            const {data} = await axios.get(`http://localhost:3002/api/v1/bands/band/${_id}`)
+            
+            return {status:true, data}
+        } catch (error) {
+            return { status: false, data: error }
+        }
+    }
 }
