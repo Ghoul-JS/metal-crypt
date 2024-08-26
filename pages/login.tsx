@@ -4,6 +4,8 @@ import Cookies from 'universal-cookie';
 import { useRouter } from 'next/navigation'
 import Link from 'next/link';
 
+import Swal from 'sweetalert2'
+
 const Login = () => {
     const [band, setBand] = useState({ bandname: '', password: '' })
     const $Auth = useMemo(() => new Authservice(), [])
@@ -25,6 +27,7 @@ const Login = () => {
           cookie.set('formedDate', data.band.formedDate, {path: '/'})
           cookie.set('token', data.token, {path: '/'})
 
+          Swal.fire("Logged!");
           router.push("/profile");
         } else {
           router.push("/login");

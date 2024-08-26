@@ -21,14 +21,17 @@ const BandPage = ({ band }: { band: BandParams }) => {
     const data = band.data
     return (
         <div>
-            <NavBar />
+            <NavBar/>
             <NavRoot />
 
             <div className='flex flex-col items-center'>
-                <h1>{data.bandname}</h1>
-                <p>{data.genre.map(e => e)}</p>
-                <Image width={400} height={400} src={data.logoBand} alt="photo" />
-                <p>{new Date(data.formedDate).toISOString().split('T')[0]}</p>
+                <div className='w-[60%]'>
+                    <h1>{data.bandname}</h1>
+                    <p>{data.genre.map(e => e)}</p>
+                    <Image width={200} height={200} src={data.logoBand} alt="photo" />
+                    <p>{new Date(data.formedDate).toISOString().split('T')[0]}</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maxime molestiae repellat autem ad. Suscipit laudantium provident aperiam explicabo labore velit aliquam laboriosam, distinctio quam cumque deleniti porro harum laborum!</p>
+                </div>
             </div>  
         </div>
     )
@@ -38,7 +41,7 @@ export default BandPage;
 
 export async function getStaticPaths() {
     const $Band = new BandsService();
-    const response = await $Band.getBands(); // Espera un objeto con la estructura { status, data }
+    const response = await $Band.getBands();
    
     if (!response.status) {
         throw new Error('Error fetching bands');

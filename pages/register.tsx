@@ -3,6 +3,8 @@ import Authservice from '../services/auth.service';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
+import Swal from 'sweetalert2'
+
 interface FormData {
   bandname: string,
   password: string,
@@ -55,16 +57,14 @@ const Register = () => {
     }
 
     try {
-      const dataBand = await $Auth.signup(formData);
-      console.log('databand', dataBand);
-      
+      const dataBand = await $Auth.signup(formData);      
       if (dataBand.status) {
+        Swal.fire("Band registered successfully!");
         router.push("/login");
       }
     } catch (error) {
       console.error("Fetch error:", error);
     }
-    console.log({ bandname: data.bandname, password: data.password, genre: data.genre, logoBand: data.logoBand, formedDate: data.formedDate });
   };
 
   return (
