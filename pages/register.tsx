@@ -129,12 +129,29 @@ const Register = () => {
         </div>
 
         <div className="flex items-center justify-between">
-          <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Registrarse
+          {
+            !data.bandname || !data.password || !data.logoBand 
+            || !data.genre || !data.formedDate ?
+            (
+              <button
+                disabled={true}
+                type="submit"
+                className="bg-blue-200 border-gray-700 text-white-400 font-bold py-2 px-4 rounded"
+              >
+                Registrarse
           </button>
+            )
+            :
+            (
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              >
+                Registrarse
+            </button>
+            )
+          }
+
         </div>
       </form>
 

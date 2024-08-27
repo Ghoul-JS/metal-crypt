@@ -46,7 +46,7 @@ const BandsHome = () => {
                         <Link href={`/band/${e._id}`}>Ver más</Link> 
                         {/* <p className="text-center ">Formed: {new Date(e.formedDate).toISOString().split('T')[0]}</p> */}
                     </div>
-                    ))}
+                    )).reverse()}
                 </div>
             </div>
             </div>

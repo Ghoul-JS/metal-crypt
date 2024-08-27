@@ -35,7 +35,6 @@ const Login = () => {
       } catch (error) {
         console.error("Fetch error:", error);
       }
-      console.log(band);
     };
 
     const handleInpustChange = (e: ChangeEvent<HTMLInputElement>) => {
