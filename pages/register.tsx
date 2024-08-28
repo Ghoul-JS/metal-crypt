@@ -68,44 +68,44 @@ const Register = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+    <div className="flex flex-col justify-center max-w-md mx-auto p-6 rounded-lg shadow-md h-[100vh]">
       <h1 className="text-2xl font-bold mb-6 text-center">Registro de Banda</h1>
       <form onSubmit={handleSubmit}>
         <div className="mb-4">
-          <label htmlFor="bandname" className="block text-gray-700 font-bold mb-2">Nombre de la Banda</label>
+          <label htmlFor="bandname" className="block text-white font-bold mb-2">Nombre de la Banda</label>
           <input
             type="text"
             name='bandname'
             onChange={handleInpustChange}
-            className="w-full px-3 py-2 border border-gray-300 text-gray-700 rounded-md"
+            className="w-full px-3 py-2 border border-gray-300 text-black rounded-md"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Contraseña</label>
+          <label htmlFor="password" className="block text-white font-bold mb-2">Contraseña</label>
           <input
             type="password"
             name='password'
             onChange={handleInpustChange}
-            className="w-full px-3 py-2 border border-gray-300 text-gray-700 rounded-md"
+            className="w-full px-3 py-2 border border-gray-300 text-black rounded-md"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="genre" className="block text-gray-700 font-bold mb-2">Género</label>
+          <label htmlFor="genre" className="block text-white font-bold mb-2">Género</label>
           <input
             type="text"
             name='genre'
             onChange={handleInpustChange}
-            className="w-full px-3 py-2 border border-gray-300 text-gray-700 rounded-md"
+            className="w-full px-3 py-2 border border-gray-300 text-black rounded-md"
             required
           />
         </div>
 
         <div className="mb-4">
-          <label htmlFor="logoBand" className="block text-gray-700 font-bold mb-2">Imagen</label>
+          <label htmlFor="logoBand" className="block text-black font-bold mb-2">Imagen</label>
           <input
             type="file"
             id="logoBand"
@@ -118,12 +118,12 @@ const Register = () => {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="formedDate" className="block text-gray-700 font-bold mb-2">Fecha de Creación</label>
+          <label htmlFor="formedDate" className="block text-white font-bold mb-2">Fecha de Creación</label>
           <input
             type="date"
             name='formedDate'
             onChange={handleInpustChange}
-            className="w-full px-3 py-2 border border-gray-300 text-gray-700 rounded-md"
+            className="w-full px-3 py-2 border border-gray-300 text-black rounded-md"
             required
           />
         </div>

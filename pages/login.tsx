@@ -47,11 +47,11 @@ const Login = () => {
     }
   
     return (
-      <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow-md">
+      <div className="flex flex-col justify-center max-w-md mx-auto p-6  rounded-lg shadow-md h-[100vh]">
         <h1 className="text-2xl font-bold mb-6 text-center">Inicio de Sesión</h1>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label htmlFor="bandname" className="block text-gray-700 font-bold mb-2">Nombre de la Banda</label>
+            <label htmlFor="bandname" className="block text-white font-bold mb-2">Nombre de la Banda</label>
             <input
               type="text"
               name="bandname"
@@ -65,7 +65,7 @@ const Login = () => {
           </div>
   
           <div className="mb-4">
-            <label htmlFor="password" className="block text-gray-700 font-bold mb-2">Contraseña</label>
+            <label htmlFor="password" className="block text-white font-bold mb-2">Contraseña</label>
             <input
               type="password"
               name="password"

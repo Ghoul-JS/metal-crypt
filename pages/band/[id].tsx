@@ -24,7 +24,7 @@ const BandPage = ({ band }: { band: BandParams }) => {
             <NavBar/>
             <NavRoot />
 
-            <div className='flex flex-col items-center'>
+            <div className='flex flex-col items-center h-[100vh] bg-black'>
                 <div className='w-[60%]'>
                     <h1>{data.bandname}</h1>
                     <p>{data.genre.map(e => e)}</p>
