@@ -7,16 +7,16 @@ const NavRoot = () => {
 
             <section className='w-[40%] mt-[70px]'>
                 <ul className='flex justify-around'>
-                    {/* <li>
+                    <li>
                         <Link href="/">
                            <p className='font-thin border-b-2 border-white'>Home</p> 
                         </Link>
-                    </li> */}
-                    <li>
+                    </li>
+                    {/* <li>
                         <Link href="/bands">
                             <p className='font-thin border-b-2 border-white'>Bands</p>
                         </Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link href="/aboutus">
                             <p className='font-thin border-b-2 border-white'>About</p>
